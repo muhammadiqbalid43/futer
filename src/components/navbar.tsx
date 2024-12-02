@@ -5,7 +5,6 @@ import {
   DropdownMenu,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { Button } from "./ui/button";
@@ -38,7 +37,7 @@ export default function Navbar() {
                   <User size={24} />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-40 bg-white">
+              <DropdownMenuContent className="w-40 bg-white z-50">
                 <DropdownMenuGroup>
                   <DropdownMenuItem>Login</DropdownMenuItem>
                   <DropdownMenuItem>Register</DropdownMenuItem>
