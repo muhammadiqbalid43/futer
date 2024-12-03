@@ -2,6 +2,7 @@ import FeaturedProduct from "@/components/featured-products";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/types/featured-products";
 import { customFetch } from "@/utils";
+import { COLLECTION } from "@/utils/constant";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -99,6 +100,107 @@ export default function Home({ products }: HomePageProps) {
       </div>
 
       <FeaturedProduct featuredProducts={products} />
+
+      {/* COLLECTION */}
+      <div className=" w-full h-[630px] mb-16">
+        <div className="container mx-auto flex gap-4">
+          <div className="w-full h-[616px] relative">
+            <Image
+              src={COLLECTION[1].bed!}
+              fill
+              quality={100}
+              alt="collection-1"
+              placeholder="empty"
+              className="object-cover w-full rounded-sm"
+            />
+            <div className="absolute inset-0 bg-colorblack opacity-30 z-10 rounded-sm"></div>
+            <div className="relative z-20 px-4 text-white text-center  h-[616px]">
+              <p className="absolute bottom-8 text-2xl text-left">
+                Our Beds Collection: Your Sleep Space with <br />
+                Comport and Style
+              </p>
+            </div>
+          </div>
+          <div className="w-full h-[616px] ">
+            <div className="w-full h-[47%] relative mb-4">
+              <Image
+                src={COLLECTION[0].sofa!}
+                fill
+                quality={100}
+                alt="collection-2"
+                className="object-cover w-full h-[50%] rounded-sm"
+              />
+              <div className="absolute inset-0 bg-colorblack opacity-30 z-10 rounded-sm"></div>
+              <div className="relative z-20 px-4 text-white text-center h-[290px]">
+                <p className="absolute bottom-8 text-2xl text-left">
+                  Browse Our Sofas Collection
+                </p>
+              </div>
+            </div>
+            <div className="w-full h-[50%]  flex gap-4">
+              <div className="relative w-[50%]">
+                <Image
+                  src={COLLECTION[2].table!}
+                  fill
+                  quality={100}
+                  alt="collection-2"
+                  className="object-cover rounded-sm"
+                />
+                <div className="absolute inset-0 bg-colorblack opacity-30 z-10 rounded-sm"></div>
+                <div className="relative z-20 px-4 text-white text-center h-[305px] ">
+                  <p className="absolute bottom-8 text-2xl text-left">
+                    Our Table Collection
+                  </p>
+                </div>
+              </div>
+              <div className="relative w-[50%]">
+                <Image
+                  src={COLLECTION[3].chair!}
+                  fill
+                  quality={100}
+                  alt="collection-2"
+                  className="object-cover w-full h-[50%] rounded-sm"
+                />
+                <div className="absolute inset-0 bg-colorblack opacity-30 z-10 rounded-sm"></div>
+                <div className="relative z-20 px-4 text-white text-center h-[305px] ">
+                  <p className="absolute bottom-8 text-2xl text-left">
+                    Our Chair Collection
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full h-[400px] mb-24">
+        <div className="container h-full mx-auto py-14 relative">
+          <Image
+            src={COLLECTION[0].sofa!}
+            fill
+            quality={100}
+            alt="collection-2"
+            className="object-cover w-full h-[50%] rounded-sm"
+          />
+          <div className="absolute inset-0 bg-colorblack opacity-20 z-10 rounded-sm"></div>
+          <div className="relative z-20 px-4 text-white text-center h-[290px]">
+            <h1 className="text-5xl font-semibold mb-8  ">
+              Craft Your{" "}
+              <a className="underline decoration-coloryellow">Ideal</a>{" "}
+              Furniture Masterpieces Today
+            </h1>
+            <p className="text-md max-w-2xl mx-auto mb-8">
+              Whether it&apos;s a sleek wooden chair, a plush sofa, or a
+              functional table with drawers, our platform offers endless
+              possibilities, Start crafting your dream furniture now and bring
+              vision to life!
+            </p>
+            <Button variant="defaultyellow" size="lg">
+              Pre-Order Now
+            </Button>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

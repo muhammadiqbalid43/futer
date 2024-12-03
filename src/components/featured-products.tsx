@@ -9,7 +9,7 @@ interface HomePageProps {
 
 export default function FeaturedProduct({ featuredProducts }: HomePageProps) {
   return (
-    <div className="w-full  h-[600px] py-14">
+    <div className="w-full  h-[600px] py-14 mb-14">
       <div className="container mx-auto h-[500px]">
         <h1 className="text-5xl mb-8">Furniture by Futer</h1>
         <div className="flex gap-10 justify-center ">
