@@ -18,7 +18,6 @@ export default function Navbar() {
 
         <div className="flex gap-x-8">
           <Navlink href="/">Home</Navlink>
-          <Navlink href="/about">About</Navlink>
           <Navlink href="/products">Products</Navlink>
           <Navlink href="/cart">Cart</Navlink>
         </div>
